@@ -52,6 +52,10 @@ function initializeQuiz(id) {
         });
 }
 
+let formattedId = String(id).trim().toUpperCase();
+    if (!formattedId.endsWith('A') && !isNaN(formattedId)) {
+        formattedId += 'A'; // E.g., turns "1" into "1A"
+    }
 
 function initializeLecture(id) {
     console.log(`Lecture template is ready! Loading PDF for ID: ${id}`);
