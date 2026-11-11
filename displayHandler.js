@@ -1,8 +1,8 @@
 const panelDisplayer = document.getElementById('panel-displayer');
 
 const fileTypeDirection = {
-    'lecture': '../../src/html/lecture.html',
-    'quiz': '../../src/html/quiz.html',
+    'lecture': 'lecture.html',
+    'quiz': 'quiz.html',
 };
 
 const params = new URLSearchParams(window.location.search);
@@ -41,7 +41,7 @@ if (targetFile) {
 function initializeQuiz(id) {
     console.log(`Quiz template is ready! Fetching data for ID: ${id}`);
     
-    fetch('../../src/json/quizData.json')
+    fetch('quizData.json')
         .then(response => response.json())
         .then(data => {
             const quizData = data[id];
@@ -57,12 +57,12 @@ function initializeLecture(id) {
     console.log(`Lecture template is ready! Loading PDF for ID: ${id}`);
 
     const lectureFiles = {
-        '1A': '../../src/pdfs/l1.pdf',
-        '2A': '../../src/pdfs/l2.pdf',
-        '3A': '../../src/pdfs/l3.pdf',
-        '4A': '../../src/pdfs/l4.pdf',
-        '5A': '../../src/pdfs/l5.pdf',
-        '6A': '../../src/pdfs/l6.pdf',
+        '1A': 'l1.pdf',
+        '2A': 'l2.pdf',
+        '3A': 'l3.pdf',
+        '4A': 'l4.pdf',
+        '5A': 'l5.pdf',
+        '6A': 'l6.pdf',
     };
 
     const pdfPath = lectureFiles[id];
