@@ -1,4 +1,4 @@
-@import url('../css/boilerplate.css');
+@import url('boilerplate.css');
 
 
 #webpageContent {
@@ -29,7 +29,7 @@
 
 
 
-    background-image: url(../../src/img/philosopher.jpg);
+    background-image: url(philosopher.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
