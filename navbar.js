@@ -16,7 +16,7 @@ function initSideNavToggle() {
 
 const navbarPlaceholder = document.getElementById('navbar-placeholder');
 
-fetch('src/html/navbar.html')
+fetch('navbar.html')
   .then(response => response.text())
   .then(data => {
      navbarPlaceholder.innerHTML = data;
